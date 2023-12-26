@@ -9,7 +9,8 @@ import (
 func main() {
 	fmt.Println()
 	fmt.Println("Easy")
-	resultingSlice, resultingMap := easy.TwoSum([]int{2, 4, 5, 6}, 10)
-	fmt.Println(resultingSlice, resultingMap)
+	resultingSlice := easy.TwoSum([]int{2, 4, 5, 6}, 10)
+	fmt.Println(resultingSlice)
 	fmt.Println(easy.TwoSumLoops([]int{2, 4, 5, 6}, 10))
+	fmt.Println(easy.RomanToInteger("IX"))
 }

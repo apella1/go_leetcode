@@ -1,25 +1,24 @@
 package easy
 
-import "fmt"
-
 /*
 * LeetCode TwoSum Problem
 * Assumptions
 * only one valid solution
 **/
 
-func TwoSum(numbers []int, target int) ([]int, map[int]int) {
-	result := make([]int, len(numbers))
+func TwoSum(numbers []int, target int) []int {
+	result := make([]int, 2)
 	mapStore := make(map[int]int)
+	// []int{2, 3, 4, 8}, 12
 	for index, value := range numbers {
-		// check if value is in mapStore
-		// if true return the index of the value in the map store and the current index
-		// otherwise store the current value in the map store and continue with the loop
-		diff := target - value
-		fmt.Println(diff)
-		mapStore[index] = value
+		// diff := target - value
+		// todo -> checking if a value exists on a map without the key
+		_, ok := mapStore[index]
+		if !ok {
+			mapStore[index] = value
+		}
 	}
-	return result, mapStore
+	return result
 }
 
 // asymptotic time is O(n^2)
