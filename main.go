@@ -13,4 +13,5 @@ func main() {
 	fmt.Println(resultingSlice)
 	fmt.Println(easy.TwoSumLoops([]int{2, 4, 5, 6}, 10))
 	fmt.Println(easy.RomanToInteger("IX"))
+	easy.FizzBuzz(100)
 }
